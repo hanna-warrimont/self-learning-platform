@@ -19,3 +19,17 @@ Konzept und Entscheidungen: `docs/Brainstorming.md`. Kursgliederung: `docs/Kurs-
 
 ## Offene Fragen
 Siehe Abschnitt „Offene Fragen“ in `docs/Brainstorming.md`.
+
+## Agent skills
+
+### Issue tracker
+
+Issues liegen in GitHub Issues (hanna-warrimont/self-learning-platform), Zugriff über `gh`. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Standard-Labels: needs-triage, needs-info, ready-for-agent, ready-for-human, wontfix. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context: `GLOSSARY.md` + `docs/adr/` im Repo-Root. See `docs/agents/domain.md`.
