@@ -10,17 +10,20 @@ _Stand: 15.11.2026 · lebendes Dokument, wird laufend ergänzt_
 | 15.11.2026 | Erster Kurs: **System Design** → Gliederung in `Kurs-System-Design.md` |
 | 15.11.2026 | Coden: **lokal** (Starter-Repo, Tests lokal) |
 | 15.11.2026 | Git-Repo angelegt, Konzeptdokumente liegen unter `docs/` |
+| 15.11.2026 | Kursprojekt System Design: **TicketRush** (Event-Ticketing-System), nicht die Lernplattform selbst |
+| 15.11.2026 | Hilfe-Stufen: **Hinweis 1 → 2 → 3**, Musterlösung nur auf Anfrage, auf Branch `solution/XX` |
+| 15.11.2026 | Kursgliederung überarbeitet (12 Module): Reservierung mit Ablaufzeit (M2), eigenes Saga-Modul mit Idempotency Keys (M5), Fake-Zahlungsdienst und OTel-Grundsetup ab M0, Observability vorgezogen (M6), Warteraum im Backend (M9), Nuxt erst ab M9 |
 
 ## 1. Vision
 Eine persönliche Lernumgebung, in der ich **durch eigenes Coden** lerne, ohne Videos. Jede Lektion endet mit einer Aufgabe, die automatisch geprüft wird.
 - Kurse: **System Design** (zuerst), danach **FinTech Stack**
-- Tech-Stack: **Nuxt** (Frontend) + **.NET** (Backend)
+- Tech-Stack: **Nuxt** (Frontend) + **.NET** (Backend), vollständige Liste in `Kurs-System-Design.md` → Stack
 
 ## 2. Lernformat (Kernidee)
 - **Lektion** = kurzer Text + Diagramm → Aufgabe → automatisches Feedback
 - **Projektbasiert:** Pro Kurs ein echtes System, das wächst (System Design: Ticketing-System)
 - Aufgabentypen: Build · Break & Fix · Measure (Lasttests) · Decide (ADR schreiben)
-- Hilfe in Stufen: Hinweis 1 → Hinweis 2 → Lösung (mit Erklärung)
+- Hilfe in Stufen: Hinweis 1 → Hinweis 2 → Hinweis 3; Musterlösung (mit Erklärung) separat auf Branch `solution/XX`
 
 ## 3. Was „Plattform“ jetzt bedeutet
 Weil sie nur für mich ist, kann der Start viel schlanker sein:
@@ -57,7 +60,11 @@ DevOps & CI/CD, Testing-Strategien, Cloud-Architektur
 4. **Phase 3:** KI-Feedback, Kurs 2 (FinTech)
 
 ## 7. Offene Fragen
-- Kursprojekt: Ticketing-System oder die Lernplattform selbst?
-- Sprache der Inhalte: Deutsch oder Englisch?
+- Sprache der Inhalte: Deutsch oder Englisch? (Vorschlag: Texte Deutsch, Code/Bezeichner/Commits Englisch)
 - Wer schreibt die Inhalte? (Ich erstelle Modul-Texte, Aufgaben und Tests mit Claude, dann arbeite ich sie selbst durch → Spoiler-Problem: Lösungen getrennt halten)
-- Zeitbudget pro Woche?
+- Zeitbudget pro Woche? (bestimmt, wie groß die Module sein sollten)
+- **Code-Ort & Test-Grenze:** Wo liegt der TicketRush-Code (z. B. `src/`)? Testen die Tests black-box gegen HTTP-API/Compose-Stack (Vorschlag) oder gegen interne Klassen?
+- **Aufholen:** Wie starte ich Modul N+1, wenn Modul N nicht fertig ist? (z. B. Branch `start/XX` aus der Musterlösung – verrät aber die Lösung von N)
+- **k6-Kriterien:** Absolute Zielwerte oder relativ zur Baseline aus Modul 0? Fehlerbudget statt „keine Fehler“?
+- **Prüfung von ADRs und Break & Fix:** Was prüft `make check` automatisch (z. B. Pflichtabschnitte im ADR ausgefüllt, Antwort-Hash bei Ursachensuche)?
+- Load Balancer: YARP oder nginx?
