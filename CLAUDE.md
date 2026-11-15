@@ -30,6 +30,10 @@ Issues liegen in GitHub Issues (hanna-warrimont/self-learning-platform), Zugriff
 
 Standard-Labels: needs-triage, needs-info, ready-for-agent, ready-for-human, wontfix. See `docs/agents/triage-labels.md`.
 
+### Harness
+
+`/harness <Idee | #Issue>` führt Arbeit durch architect → developer → verifier → reviewer (`.claude/agents/`). Läufe landen in `.harness/runs/`.
+
 ### Domain docs
 
 Single-context: `GLOSSARY.md` + `docs/adr/` im Repo-Root. See `docs/agents/domain.md`.

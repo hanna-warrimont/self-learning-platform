@@ -13,6 +13,7 @@ _Stand: 15.11.2026 · lebendes Dokument, wird laufend ergänzt_
 | 15.11.2026 | Kursprojekt System Design: **TicketRush** (Event-Ticketing-System), nicht die Lernplattform selbst |
 | 15.11.2026 | Hilfe-Stufen: **Hinweis 1 → 2 → 3**, Musterlösung nur auf Anfrage, auf Branch `solution/XX` |
 | 15.11.2026 | Kursgliederung überarbeitet (12 Module): Reservierung mit Ablaufzeit (M2), eigenes Saga-Modul mit Idempotency Keys (M5), Fake-Zahlungsdienst und OTel-Grundsetup ab M0, Observability vorgezogen (M6), Warteraum im Backend (M9), Nuxt erst ab M9 |
+| 15.11.2026 | Agent-Harness `/harness` mit 4 Rollen (architect, developer, verifier, reviewer) auf Basis der Matt-Pocock-Skills; darf Plattform-Code und Kursmaterial bauen, Musterlösungen nur im Solution-Modus auf `solution/XX`; einziger Stopp nach dem Architect-Entwurf |
 
 ## 1. Vision
 Eine persönliche Lernumgebung, in der ich **durch eigenes Coden** lerne, ohne Videos. Jede Lektion endet mit einer Aufgabe, die automatisch geprüft wird.

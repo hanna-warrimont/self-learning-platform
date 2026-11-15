@@ -23,3 +23,6 @@ dist/
 .idea/
 .vscode/*
 !.vscode/extensions.json
+
+# Harness-Läufe (Reports, Entwürfe)
+.harness/
